@@ -49,17 +49,19 @@
           </p>
 
           <div>
-            <input
-              type="range"
-              class="pageview_input"
-              min="10"
-              max="1000"
-              step="10"
-            />
+            <input type="range" class="pageview_input" min="10" max="1000" />
+
+            <!-- <datalist id="pageviews">
+              <option value="10"></option>
+              <option value="50"></option>
+              <option value="100"></option>
+              <option value="500"></option>
+              <option value="1000"></option>
+            </datalist> -->
           </div>
 
-          <p>
-            <span> $16.00 </span>
+          <p class="pageview_pricing">
+            $<span class="pageview_amount">16.00</span>
             <span> /month </span>
           </p>
         </div>
@@ -68,7 +70,7 @@
           <p>Monthly Billing</p>
 
           <div>
-            <input type="checkbox" />
+            <input type="checkbox" class="yearly_billing_toggle" />
           </div>
 
           <p>Yearly Billing</p>
@@ -92,7 +94,9 @@
         </div>
       </div>
 
-      <button>Start my trial</button>
+      <a href="http://" target="_blank" rel="noopener noreferrer"
+        >Start my trial</a
+      >
     </section>
 
     <div class="attribution">
