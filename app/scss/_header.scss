@@ -1,2 +1,33 @@
 .header {
+  background-image: url('../../images/bg-pattern.svg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__titles {
+    padding-top: 4.625rem;
+    padding-bottom: 3.375rem;
+    background-image: url('../../images/pattern-circles.svg');
+    background-position: center center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+
+    .main {
+      color: $darkDesaturatedBlue;
+      font-size: 0.938rem;
+      font-weight: $font-weight-big;
+      margin-bottom: 0.015625rem;
+    }
+
+    //     p:nth-child(1) {
+    //       margin-bottom: -0.625rem;
+    //     }
+
+    p {
+      color: $grayishBlue;
+      font-size: 0.625rem;
+      font-weight: $font-weight-small;
+      margin-bottom: -0.375rem;
+    }
+  }
 }
