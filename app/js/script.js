@@ -9,9 +9,9 @@ const yearlyBillingToggle = domSelector('.yearly_billing_toggle');
 let pricingArray = [8, 12, 16, 24, 36];
 const pageViews = [10, 50, 100, 500, 1000];
 
-// console.log(pricingArray);
+console.log(pricingArray);
 
-rangeInput.oninput = function () {
+rangeInput.addEventListener('input', function () {
   pageViewValue.textContent = this.value;
 
   pageViews.forEach((view, index) => {
@@ -22,4 +22,4 @@ rangeInput.oninput = function () {
           : pricingArray[index].toFixed(2);
     }
   });
-};
+});
