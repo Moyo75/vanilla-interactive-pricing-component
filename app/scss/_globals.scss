@@ -20,6 +20,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Manrope', sans-serif;
+  overflow-x: hidden;
 }
 
 .flex {
@@ -39,4 +40,9 @@ body {
   &__jc-sa {
     justify-content: space-around;
   }
+}
+
+.main__container {
+  position: absolute;
+  width: 100%;
 }

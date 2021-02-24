@@ -1,0 +1,15 @@
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  z-index: 10;
+  top: -10px;
+
+  .first__container {
+    border: 1px solid #eee;
+    width: inherit;
+  }
+}

@@ -33,65 +33,73 @@
     </style>
   </head>
   <body>
-    <header class="header">
-      <div class="header__titles flex flex__ai-c flex__fd-c">
-        <h1 class="main">Simple, traffic-based pricing</h1>
+    <div class="main__container">
+      <header class="header">
+        <div class="header__titles flex flex__ai-c flex__fd-c">
+          <h1 class="main">Simple, traffic-based pricing</h1>
 
-        <p class="first">Sign-up for our 30-day trial.</p>
+          <p class="first">Sign-up for our 30-day trial.</p>
 
-        <p class="second">No credit card required.</p>
-      </div>
-    </header>
+          <p class="second">No credit card required.</p>
+        </div>
+      </header>
 
-    <section class="main">
-      <div class="container">
-        <div class="container_top">
-          <p class="pageview_text">
-            <span class="pageview_number">100K</span> Pageviews
-          </p>
+      <div class="main flex flex__fd-c">
+        <div class="first__container flex flex__ai-c flex__fd-c">
+          <div class="pricing__amount">
+            <p class="pageview_text">
+              <span class="pageview_number">100K</span> PAGEVIEWS
+            </p>
 
-          <div>
-            <input type="range" class="pageview_input" min="1" max="5" />
+            <div>
+              <input
+                type="range"
+                class="pageview_input"
+                min="1"
+                max="5"
+                value="2"
+              />
+            </div>
+
+            <p class="pageview_pricing">
+              $<span class="pageview_amount">16.00</span>
+              <span> /month </span>
+            </p>
           </div>
 
-          <p class="pageview_pricing">
-            $<span class="pageview_amount">16.00</span>
-            <span> /month </span>
-          </p>
-        </div>
-
-        <div>
-          <p>Monthly Billing</p>
-
           <div>
-            <input type="checkbox" class="yearly_billing_toggle" />
+            <p>Monthly Billing</p>
+
+            <div>
+              <input type="checkbox" class="yearly_billing_toggle" />
+            </div>
+
+            <p>Yearly Billing</p>
+
+            <p>25%</p>
           </div>
-
-          <p>Yearly Billing</p>
-
-          <p>25%</p>
         </div>
+
+        <div>
+          <div>
+            <img src="./images/icon-check.svg" />
+            <p>Unlimited websites</p>
+          </div>
+          <div>
+            <img src="./images/icon-check.svg" />
+            <p>100% Data ownership</p>
+          </div>
+          <div>
+            <img src="./images/icon-check.svg" />
+            <p>Email reports</p>
+          </div>
+        </div>
+
+        <a href="http://" target="_blank" rel="noopener noreferrer"
+          >Start my trial</a
+        >
       </div>
-
-      <div>
-        <div>
-          <img src="./images/icon-check.svg" />
-          <p>Unlimited websites</p>
-        </div>
-        <div>
-          <img src="./images/icon-check.svg" />
-          <p>100% Data ownership</p>
-        </div>
-        <div>
-          <img src="./images/icon-check.svg" />
-          <p>Email reports</p>
-        </div>
-      </div>
-
-      <a href="http://" target="_blank" rel="noopener noreferrer"
-        >Start my trial</a
-      >
-    </section>
+    </div>
 
     <div class="attribution">
       Challenge by
