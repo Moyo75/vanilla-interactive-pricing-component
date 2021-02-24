@@ -1,9 +1,9 @@
 // console.log('Working...');
 const domSelector = (name) => document.querySelector(name);
 
-const rangeInput = domSelector('.pageview_input');
-const pageViewValue = domSelector('.pageview_number');
-const pageViewAmount = domSelector('.pageview_amount');
+const rangeInput = domSelector('.pageview__input');
+const pageViewValue = domSelector('.pageview__number');
+const pageViewAmount = domSelector('.pageview__amount');
 const yearlyBillingToggle = domSelector('.yearly_billing_toggle');
 
 let pricingArray = [8, 12, 16, 24, 36];
