@@ -30,8 +30,16 @@ body {
     justify-content: space-between;
   }
 
+  &__jc-c {
+    justify-content: center;
+  }
+
   &__fd-c {
     flex-direction: column;
+  }
+
+  &__fd-r {
+    flex-direction: row;
   }
 
   &__ai-c {
@@ -42,6 +50,6 @@ body {
   }
 }
 
-.main__container {
+.width__100 {
   width: 100%;
 }

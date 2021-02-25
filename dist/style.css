@@ -31,8 +31,16 @@ body {
   justify-content: space-between;
 }
 
+.flex__jc-c {
+  justify-content: center;
+}
+
 .flex__fd-c {
   flex-direction: column;
+}
+
+.flex__fd-r {
+  flex-direction: row;
 }
 
 .flex__ai-c {
@@ -43,7 +51,7 @@ body {
   justify-content: space-around;
 }
 
-.main__container {
+.width__100 {
   width: 100%;
 }
 
@@ -80,7 +88,7 @@ body {
   margin-bottom: -0.375rem;
 }
 
-.main {
+.main__container .main {
   position: relative;
   width: 87.837%;
   margin: 0 auto;
@@ -91,29 +99,75 @@ body {
   top: -9rem;
 }
 
-.main .first__container {
-  width: 100%;
-}
-
-.main .pricing__amount {
-  width: 100%;
-}
-
-.main .slider__container {
-  width: 100%;
-}
-
-.main .slider__container input[type='range'] {
+.main__container .main .slider__container .pageview__input {
+  -webkit-appearance: none;
   width: 12.875rem;
-  color: #a5f3eb;
+  height: 0.375rem;
+  outline: none;
+  background: linear-gradient(90deg, #a5f3eb 50%, #cdd7ee 50%);
+  margin-bottom: 1.4375rem;
 }
 
-.main .pageview__text {
+.main__container .main .slider__container .pageview__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background: #10d5c2;
+  background-image: url("../../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 15px 20px -3px #10d5c2;
+}
+
+.main__container .main .slider__container .pageview__input::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background: #10d5c2;
+  background-image: url("../../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 15px 20px -3px #10d5c2;
+}
+
+.main__container .main .slider__container .pageview__input::-ms-thumb {
+  -webkit-appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background: #10d5c2;
+  background-image: url("../../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 15px 20px -3px #10d5c2;
+}
+
+.main__container .main .pageview__text {
   color: #858fad;
   font-size: 0.625rem;
   font-weight: 900;
   margin-top: 2.125rem;
   margin-bottom: 2.1875rem;
   letter-spacing: 0.125rem;
+}
+
+.main__container .main .pageview__amount {
+  font-size: 1.5rem;
+  color: #293356;
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.main__container .main .per__month {
+  color: #858fad;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  height: 39px;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */

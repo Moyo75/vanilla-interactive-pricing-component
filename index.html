@@ -33,7 +33,7 @@
     </style>
   </head>
   <body>
-    <div class="main__container">
+    <div class="main__container width__100">
       <header class="header">
         <div class="header__titles flex flex__ai-c flex__fd-c">
           <h1 class="main-text">Simple, traffic-based pricing</h1>
@@ -45,33 +45,35 @@
       </header>
 
       <div class="main flex flex__fd-c">
-        <div class="first__container flex flex__ai-c flex__fd-c">
-          <div class="pricing__amount flex flex__ai-c flex__fd-c">
+        <div class="first__container width__100 flex flex__ai-c flex__fd-c">
+          <div class="pricing__amount width__100 flex flex__ai-c flex__fd-c">
             <p class="pageview__text">
               <span class="pageview__number">100K</span> PAGEVIEWS
             </p>
 
-            <div class="slider__container flex flex__ai-c flex__fd-c">
+            <div
+              class="slider__container width__100 flex flex__ai-c flex__fd-c"
+            >
               <input
                 type="range"
                 class="pageview__input"
                 min="1"
-                max="5"
+                value="50"
+                max="100"
                 value="2"
               />
             </div>
-
-            <p class="pageview_pricing">
-              $<span class="pageview__amount">16.00</span>
-              <span> /month </span>
+            <p class="pageview_pricing width__100 flex flex__jc-c flex__ai-c">
+              <span class="pageview__amount">$16.00</span>
+              <span class="per__month"> / month </span>
             </p>
           </div>
 
-          <div>
-            <p>Monthly Billing</p>
+          <div class="billing__list">
+            <p class="monthly__billing">Monthly Billing</p>
 
             <div>
-              <input type="checkbox" class="yearly_billing_toggle" />
+              <input type="checkbox" class="yearly__billing__toggle" />
             </div>
 
             <p>Yearly Billing</p>
@@ -99,13 +101,13 @@
           >Start my trial</a
         >
       </div>
-    </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
     </div>
   </body>
   <script src="./app/js/script.js"></script>
