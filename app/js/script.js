@@ -33,7 +33,6 @@ function handlePageviewAndAmount() {
 
 function handleSliderBG() {
   const percent = slider.value;
-  console.log(percent);
   const colorBg = `linear-gradient(90deg, rgb(16, 213, 194) ${percent}%, rgb(234, 238, 251)
   ${percent}%)`;
   slider.style.background = colorBg;

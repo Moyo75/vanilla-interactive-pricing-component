@@ -3,14 +3,16 @@
     position: relative;
     width: 87.837%;
     margin: 0 auto;
-    // padding-left: 1rem;
-    // padding-right: 1rem;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 19px 38px #eee, 0 15px 12px #efefef;
     border: 1px solid #eee;
 
     top: -9rem;
+
+    .first__container {
+      margin-bottom: 1.25rem;
+    }
 
     .slider__container {
       .pageview__input {
@@ -78,15 +80,86 @@
       font-size: 1.5rem;
       color: $darkDesaturatedBlue;
       font-weight: $font-weight-big;
-      margin-right: 10px;
+      margin-right: 0.625rem;
     }
 
     .per__month {
       color: $grayishBlue;
-      font-size: 0.8125rem;
+      font-size: 0.75rem;
       font-weight: $font-weight-small;
-      height: 39px;
-      margin-top: 20px;
+      height: 2.4375rem;
+      margin-top: 1.25rem;
+    }
+
+    .billing__list {
+      width: 85%;
+    }
+
+    .billing {
+      font-size: 11px;
+      font-weight: $font-weight-small;
+    }
+
+    .monthly__billing,
+    .yearly__billing {
+      color: $grayishBlue;
+    }
+
+    .checkbox__label {
+      position: relative;
+      width: 2rem;
+      height: 1rem;
+    }
+
+    .checkbox__label .yearly__billing__toggle {
+      -webkit-appearance: none;
+      outline: none;
+    }
+
+    .yearly__billing__slider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      cursor: pointer;
+      transition: 0.4s;
+      border-radius: 34px;
+      transition: 0.4s;
+      background-color: $lightGrayishBlue;
+    }
+
+    .yearly__billing__slider::before {
+      position: absolute;
+      content: '';
+      top: 3px;
+      left: 3px;
+      width: 13px;
+      height: 13px;
+      transition: 0.4s;
+      background-color: #fff;
+      transition: 0.4s;
+      border-radius: 23px;
+    }
+
+    .yearly__billing__toggle:checked + .yearly__billing__slider {
+      background-color: $strongCyan;
+    }
+
+    .yearly__billing__toggle:checked + .yearly__billing__slider::before {
+      transform: translate(20px);
+    }
+
+    .twenty__five {
+      color: #f5beab;
+      background-color: #fdf0ed;
+      padding: 2px 7px;
+      border-radius: 10px;
+    }
+
+    .seperator {
+      background-color: #f9f9fd;
+      height: 2px;
     }
   }
 }
