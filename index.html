@@ -22,18 +22,9 @@
 
     <link rel="stylesheet" href="dist/style.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <div class="main__container width__100">
+    <div class="main__container">
       <header class="header">
         <div class="header__titles flex flex__ai-c flex__fd-c">
           <h1 class="main-text">Simple, traffic-based pricing</h1>
@@ -47,10 +38,17 @@
       <div class="main flex flex__fd-c">
         <div class="first__container width__100 flex flex__ai-c flex__fd-c">
           <div class="pricing__amount width__100 flex flex__ai-c flex__fd-c">
+            <!-- <div> -->
             <p class="pageview__text">
-              <span class="pageview__number text__transition">100K</span>
+              <span class="pageview__number">100K</span>
               PAGEVIEWS
             </p>
+
+            <p class="pageview_pricing width__100 flex flex__jc-c flex__ai-c">
+              <span class="pageview__amount">$16.00</span>
+              <span class="per__month"> / month </span>
+            </p>
+            <!-- </div> -->
 
             <div
               class="slider__container width__100 flex flex__ai-c flex__fd-c"
@@ -64,10 +62,6 @@
                 value="2"
               />
             </div>
-            <p class="pageview_pricing width__100 flex flex__jc-c flex__ai-c">
-              <span class="pageview__amount text__transition">$16.00</span>
-              <span class="per__month"> / month </span>
-            </p>
           </div>
 
           <div class="billing__list flex flex__jc-sa flex__ai-c">
@@ -83,34 +77,42 @@
             <p class="billing twenty__five">-25%</p>
           </div>
         </div>
+
         <div class="seperator"></div>
-        <div>
-          <div>
-            <img src="./images/icon-check.svg" />
-            <p>Unlimited websites</p>
+
+        <div class="second__container flex flex__fd-c flex__ai-c">
+          <div class="flex flex__ai-c list__item">
+            <img width="8px" height="6px" src="./images/icon-check.svg" />
+            <p class="billing ml__ten">Unlimited websites</p>
           </div>
-          <div>
-            <img src="./images/icon-check.svg" />
-            <p>100% Data ownership</p>
+          <div class="flex flex__ai-c list__item">
+            <img width="8px" height="6px" src="./images/icon-check.svg" />
+            <p class="billing ml__ten">100% Data ownership</p>
           </div>
-          <div>
-            <img src="./images/icon-check.svg" />
-            <p>Email reports</p>
+          <div class="flex flex__ai-c list__item">
+            <img width="8px" height="6px" src="./images/icon-check.svg" />
+            <p class="billing ml__ten">Email reports</p>
           </div>
+
+          <a
+            href="http://"
+            class="billing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Start my trial</a
+          >
         </div>
-
-        <a href="http://" target="_blank" rel="noopener noreferrer"
-          >Start my trial</a
-        >
       </div>
-
+    </div>
+    <footer>
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. <br />
+        Coded by <a href="#">John</a>.
       </div>
-    </div>
+    </footer>
   </body>
   <script src="./app/js/script.js"></script>
 </html>

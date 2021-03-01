@@ -3,7 +3,7 @@
     position: relative;
     width: 87.837%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 10px;
     box-shadow: 0 19px 38px #eee, 0 15px 12px #efefef;
     border: 1px solid #eee;
@@ -38,7 +38,7 @@
         background-position: center;
         border-radius: 50%;
         cursor: pointer;
-        box-shadow: 0px 15px 20px -3px $strongCyan;
+        box-shadow: 0rem 0.9375rem 1.875rem -0.1875rem #2df7e6;
       }
 
       .pageview__input::-moz-range-thumb {
@@ -51,7 +51,7 @@
         background-position: center;
         border-radius: 50%;
         cursor: pointer;
-        box-shadow: 0px 15px 20px -3px $strongCyan;
+        box-shadow: 0rem 0.9375rem 1.875rem -0.1875rem #2df7e6;
       }
       .pageview__input::-ms-thumb {
         -webkit-appearance: none;
@@ -63,7 +63,7 @@
         background-position: center;
         border-radius: 50%;
         cursor: pointer;
-        box-shadow: 0px 15px 20px -3px $strongCyan;
+        box-shadow: 0rem 0.9375rem 1.875rem -0.1875rem #2df7e6;
       }
     }
 
@@ -88,7 +88,34 @@
       font-size: 0.75rem;
       font-weight: $font-weight-small;
       height: 2.4375rem;
-      margin-top: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .pricing__amount {
+      flex-wrap: wrap;
+
+      .pageview__text {
+        order: 1;
+        @include breakpoint-up(small) {
+          order: 1;
+        }
+      }
+
+      .slider__container {
+        order: 2;
+        @include breakpoint-up(small) {
+          order: 3;
+        }
+      }
+
+      .pageview_pricing {
+        order: 3;
+        @include breakpoint-up(small) {
+          order: 2;
+        }
+      }
+
+      // pricing__amount slider__container pageview_pricing
     }
 
     .billing__list {
@@ -124,7 +151,7 @@
       right: 0;
       cursor: pointer;
       transition: 0.4s;
-      border-radius: 34px;
+      border-radius: 2.125rem;
       transition: 0.4s;
       background-color: $lightGrayishBlue;
     }
@@ -132,14 +159,14 @@
     .yearly__billing__slider::before {
       position: absolute;
       content: '';
-      top: 3px;
-      left: 3px;
-      width: 13px;
-      height: 13px;
+      top: 0.09rem;
+      left: 0.1875rem;
+      width: 0.8125rem;
+      height: 0.8125rem;
       transition: 0.4s;
-      background-color: #fff;
+      background-color: $white;
       transition: 0.4s;
-      border-radius: 23px;
+      border-radius: 1.4375rem;
     }
 
     .yearly__billing__toggle:checked + .yearly__billing__slider {
@@ -147,19 +174,38 @@
     }
 
     .yearly__billing__toggle:checked + .yearly__billing__slider::before {
-      transform: translate(20px);
+      transform: translate(0.8rem);
     }
 
     .twenty__five {
       color: #f5beab;
       background-color: #fdf0ed;
-      padding: 2px 7px;
-      border-radius: 10px;
+      padding: 0.125rem 0.4375rem;
+      border-radius: 0.625rem;
     }
 
     .seperator {
       background-color: #f9f9fd;
-      height: 2px;
+      height: 0.125rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .list__item {
+      color: $grayishBlue;
+      width: 42%;
+    }
+
+    .second__container > div:nth-child(3) {
+      margin-bottom: 1.1rem;
+    }
+
+    .second__container a {
+      text-decoration: none;
+      color: $paleBlue;
+      background-color: $darkDesaturatedBlue;
+      padding: 0.6875rem 2.35rem;
+      border-radius: 1.25rem;
+      margin-bottom: 1.875rem;
     }
   }
 }
