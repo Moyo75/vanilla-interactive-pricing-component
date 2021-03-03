@@ -21,6 +21,7 @@ body {
   padding: 0px;
   font-family: 'Manrope', sans-serif;
   overflow-x: hidden;
+  background-color: #f9faff;
 }
 
 .flex {
@@ -36,6 +37,10 @@ body {
 
   &__fd-c {
     flex-direction: column;
+  }
+
+  &__ai-fs {
+    align-items: flex-start;
   }
 
   &__fd-r {

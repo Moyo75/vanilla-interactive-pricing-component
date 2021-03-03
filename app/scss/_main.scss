@@ -1,14 +1,25 @@
 .main__container {
   .main {
     position: relative;
-    width: 87.837%;
-    margin: 0 auto;
+    margin: 0 19px;
     background-color: $white;
     border-radius: 10px;
     box-shadow: 0 19px 38px #eee, 0 15px 12px #efefef;
     border: 1px solid #eee;
-
     top: -9rem;
+    max-width: 513.8932px;
+
+    @include breakpoint-up(small) {
+      margin: 0 auto;
+    }
+
+    // @media (min-width: 376px) and (max-width: 550px) {
+    //   margin: 0 10px;
+    // }
+
+    @include breakpoint-between(376px, 550px) {
+      margin: 0 10px;
+    }
 
     .first__container {
       margin-bottom: 1.25rem;
@@ -19,6 +30,7 @@
         -webkit-appearance: none;
         width: 12.875rem;
         height: 0.375rem;
+        border-radius: 20px;
         outline: none;
         background: linear-gradient(
           90deg,
@@ -26,6 +38,10 @@
           $lightGrayishBlue 50%
         );
         margin-bottom: 1.4375rem;
+
+        @include breakpoint-up(small) {
+          width: 84%;
+        }
       }
 
       .pageview__input::-webkit-slider-thumb {
@@ -74,6 +90,11 @@
       margin-top: 2.125rem;
       margin-bottom: 2.1875rem;
       letter-spacing: 0.125rem;
+
+      @include breakpoint-up(small) {
+        align-self: center;
+        padding-left: 22px;
+      }
     }
 
     .pageview__amount {
@@ -81,6 +102,10 @@
       color: $darkDesaturatedBlue;
       font-weight: $font-weight-big;
       margin-right: 0.625rem;
+
+      @include breakpoint-up(small) {
+        margin-right: 0.3rem;
+      }
     }
 
     .per__month {
@@ -89,37 +114,71 @@
       font-weight: $font-weight-small;
       height: 2.4375rem;
       margin-top: 1.5rem;
+
+      @include breakpoint-up(small) {
+        margin-right: -1rem;
+      }
     }
+
+    // .pageview_pricing {
+    //   @media (min-width: 376px) and (max-width: 550px) {
+    //     margin-left: -20px;
+    //   }
+    // }
+
+    // .pageview__text {
+    //   @media (min-width: 376px) and (max-width: 550px) {
+    //     padding-left: 25px;
+    //   }
+    // }
 
     .pricing__amount {
       flex-wrap: wrap;
 
       .pageview__text {
-        order: 1;
+        @media (min-width: 375px) and (max-width: 550px) {
+          margin-left: -25px;
+        }
         @include breakpoint-up(small) {
           order: 1;
+          flex: 1 50%;
+          padding-left: 38px;
         }
       }
 
       .slider__container {
-        order: 2;
         @include breakpoint-up(small) {
           order: 3;
+          flex: 1 100%;
+          margin-bottom: 20px;
         }
       }
 
       .pageview_pricing {
-        order: 3;
+        @media (min-width: 375px) and (max-width: 435px) {
+          padding-right: 31px !important;
+        }
         @include breakpoint-up(small) {
           order: 2;
+          flex: 1 50%;
+          padding-right: 10px;
         }
       }
 
-      // pricing__amount slider__container pageview_pricing
+      //flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'>
     }
 
     .billing__list {
       width: 85%;
+
+      @media (min-width: 375px) and (max-width: 435px) {
+        width: 100%;
+      }
+
+      @include breakpoint-up(small) {
+        justify-content: flex-end;
+        padding-right: 20px;
+      }
     }
 
     .billing {
@@ -130,12 +189,25 @@
     .monthly__billing,
     .yearly__billing {
       color: $grayishBlue;
+      @include breakpoint-up(small) {
+        margin-left: 10px;
+      }
+    }
+
+    .discount {
+      display: none;
+      @include breakpoint-up(small) {
+        display: inline-block;
+      }
     }
 
     .checkbox__label {
       position: relative;
-      width: 2rem;
+      width: 1.9rem;
       height: 1rem;
+      @include breakpoint-up(small) {
+        margin-left: 10px;
+      }
     }
 
     .checkbox__label .yearly__billing__toggle {
@@ -159,14 +231,14 @@
     .yearly__billing__slider::before {
       position: absolute;
       content: '';
-      top: 0.09rem;
+      top: 0.17rem;
       left: 0.1875rem;
-      width: 0.8125rem;
-      height: 0.8125rem;
+      width: 0.7rem;
+      height: 0.7rem;
       transition: 0.4s;
-      background-color: $white;
+      background-color: white;
       transition: 0.4s;
-      border-radius: 1.4375rem;
+      border-radius: 77px;
     }
 
     .yearly__billing__toggle:checked + .yearly__billing__slider {
@@ -182,6 +254,9 @@
       background-color: #fdf0ed;
       padding: 0.125rem 0.4375rem;
       border-radius: 0.625rem;
+      @include breakpoint-up(small) {
+        margin-left: 10px;
+      }
     }
 
     .seperator {
@@ -193,10 +268,29 @@
     .list__item {
       color: $grayishBlue;
       width: 42%;
+
+      @include breakpoint-up(small) {
+        width: 70%;
+      }
     }
 
-    .second__container > div:nth-child(3) {
+    .list__container > div:nth-child(3) {
       margin-bottom: 1.1rem;
+    }
+
+    .list__container {
+      width: 80%;
+      @include breakpoint-up(small) {
+        // margin-left: 40px;
+      }
+    }
+
+    .second__container {
+      @include breakpoint-up(small) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
     }
 
     .second__container a {
@@ -205,7 +299,21 @@
       background-color: $darkDesaturatedBlue;
       padding: 0.6875rem 2.35rem;
       border-radius: 1.25rem;
-      margin-bottom: 1.875rem;
+      margin-bottom: 1.375rem;
+
+      // @media (min-width: 376px) and (max-width: 387px) {
+      //   width: 43%;
+      // }
+
+      @include breakpoint-up(small) {
+        margin-right: 35px;
+        margin-top: 35px;
+        padding: 11px 5px;
+        border-radius: 24px;
+        margin-bottom: 1.875rem;
+        width: 45%;
+        text-align: center;
+      }
     }
   }
 }

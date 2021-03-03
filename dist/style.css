@@ -21,6 +21,7 @@ body {
   padding: 0px;
   font-family: 'Manrope', sans-serif;
   overflow-x: hidden;
+  background-color: #f9faff;
 }
 
 .flex {
@@ -37,6 +38,10 @@ body {
 
 .flex__fd-c {
   flex-direction: column;
+}
+
+.flex__ai-fs {
+  align-items: flex-start;
 }
 
 .flex__fd-r {
@@ -68,13 +73,25 @@ body {
   border-bottom-left-radius: 21.25rem 10.43rem;
 }
 
+@media (min-width: 23.4375em) {
+  .header {
+    border-bottom-left-radius: 11.25rem 10.43rem;
+  }
+}
+
 .header__titles {
   padding-top: 4.625rem;
   padding-bottom: 3.375rem;
   background-image: url("../../images/pattern-circles.svg");
   background-position: center center;
-  background-size: 40%;
+  background-size: 120px;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 23.4375em) {
+  .header__titles {
+    background-size: 120px;
+  }
 }
 
 .header__titles .main-text {
@@ -85,6 +102,12 @@ body {
   margin-bottom: 0.015625rem;
 }
 
+@media (min-width: 23.4375em) {
+  .header__titles .main-text {
+    font-size: 1.1rem;
+  }
+}
+
 .header__titles p {
   color: #858fad;
   font-size: 0.625rem;
@@ -92,15 +115,33 @@ body {
   margin-bottom: -0.375rem;
 }
 
+@media (min-width: 23.4375em) {
+  .header__titles .second {
+    float: left;
+  }
+}
+
 .main__container .main {
   position: relative;
-  width: 87.837%;
-  margin: 0 auto;
+  margin: 0 19px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 19px 38px #eee, 0 15px 12px #efefef;
   border: 1px solid #eee;
   top: -9rem;
+  max-width: 513.8932px;
+}
+
+@media (min-width: 23.4375em) {
+  .main__container .main {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 550px) {
+  .main__container .main {
+    margin: 0 10px;
+  }
 }
 
 .main__container .main .first__container {
@@ -111,9 +152,16 @@ body {
   -webkit-appearance: none;
   width: 12.875rem;
   height: 0.375rem;
+  border-radius: 20px;
   outline: none;
   background: linear-gradient(90deg, #a5f3eb 50%, #cdd7ee 50%);
   margin-bottom: 1.4375rem;
+}
+
+@media (min-width: 23.4375em) {
+  .main__container .main .slider__container .pageview__input {
+    width: 84%;
+  }
 }
 
 .main__container .main .slider__container .pageview__input::-webkit-slider-thumb {
@@ -164,11 +212,24 @@ body {
   letter-spacing: 0.125rem;
 }
 
+@media (min-width: 23.4375em) {
+  .main__container .main .pageview__text {
+    align-self: center;
+    padding-left: 22px;
+  }
+}
+
 .main__container .main .pageview__amount {
   font-size: 1.5rem;
   color: #293356;
   font-weight: 900;
   margin-right: 0.625rem;
+}
+
+@media (min-width: 23.4375em) {
+  .main__container .main .pageview__amount {
+    margin-right: 0.3rem;
+  }
 }
 
 .main__container .main .per__month {
@@ -179,42 +240,67 @@ body {
   margin-top: 1.5rem;
 }
 
+@media (min-width: 23.4375em) {
+  .main__container .main .per__month {
+    margin-right: -1rem;
+  }
+}
+
 .main__container .main .pricing__amount {
   flex-wrap: wrap;
 }
 
-.main__container .main .pricing__amount .pageview__text {
-  order: 1;
+@media (min-width: 375px) and (max-width: 550px) {
+  .main__container .main .pricing__amount .pageview__text {
+    margin-left: -25px;
+  }
 }
 
 @media (min-width: 23.4375em) {
   .main__container .main .pricing__amount .pageview__text {
     order: 1;
+    flex: 1 50%;
+    padding-left: 38px;
   }
-}
-
-.main__container .main .pricing__amount .slider__container {
-  order: 2;
 }
 
 @media (min-width: 23.4375em) {
   .main__container .main .pricing__amount .slider__container {
     order: 3;
+    flex: 1 100%;
+    margin-bottom: 20px;
   }
 }
 
-.main__container .main .pricing__amount .pageview_pricing {
-  order: 3;
+@media (min-width: 375px) and (max-width: 435px) {
+  .main__container .main .pricing__amount .pageview_pricing {
+    padding-right: 31px !important;
+  }
 }
 
 @media (min-width: 23.4375em) {
   .main__container .main .pricing__amount .pageview_pricing {
     order: 2;
+    flex: 1 50%;
+    padding-right: 10px;
   }
 }
 
 .main__container .main .billing__list {
   width: 85%;
+}
+
+@media (min-width: 375px) and (max-width: 435px) {
+  .main__container .main .billing__list {
+    width: 100%;
+  }
+}
+
+@media (min-width: 23.4375em) {
+  .main__container .main .billing__list {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
 }
 
 .main__container .main .billing {
@@ -227,10 +313,33 @@ body {
   color: #858fad;
 }
 
+@media (min-width: 23.4375em) {
+  .main__container .main .monthly__billing,
+  .main__container .main .yearly__billing {
+    margin-left: 10px;
+  }
+}
+
+.main__container .main .discount {
+  display: none;
+}
+
+@media (min-width: 23.4375em) {
+  .main__container .main .discount {
+    display: inline-block;
+  }
+}
+
 .main__container .main .checkbox__label {
   position: relative;
-  width: 2rem;
+  width: 1.9rem;
   height: 1rem;
+}
+
+@media (min-width: 23.4375em) {
+  .main__container .main .checkbox__label {
+    margin-left: 10px;
+  }
 }
 
 .main__container .main .checkbox__label .yearly__billing__toggle {
@@ -254,14 +363,14 @@ body {
 .main__container .main .yearly__billing__slider::before {
   position: absolute;
   content: '';
-  top: 0.09rem;
+  top: 0.17rem;
   left: 0.1875rem;
-  width: 0.8125rem;
-  height: 0.8125rem;
+  width: 0.7rem;
+  height: 0.7rem;
   transition: 0.4s;
   background-color: white;
   transition: 0.4s;
-  border-radius: 1.4375rem;
+  border-radius: 77px;
 }
 
 .main__container .main .yearly__billing__toggle:checked + .yearly__billing__slider {
@@ -279,6 +388,12 @@ body {
   border-radius: 0.625rem;
 }
 
+@media (min-width: 23.4375em) {
+  .main__container .main .twenty__five {
+    margin-left: 10px;
+  }
+}
+
 .main__container .main .seperator {
   background-color: #f9f9fd;
   height: 0.125rem;
@@ -290,8 +405,26 @@ body {
   width: 42%;
 }
 
-.main__container .main .second__container > div:nth-child(3) {
+@media (min-width: 23.4375em) {
+  .main__container .main .list__item {
+    width: 70%;
+  }
+}
+
+.main__container .main .list__container > div:nth-child(3) {
   margin-bottom: 1.1rem;
+}
+
+.main__container .main .list__container {
+  width: 80%;
+}
+
+@media (min-width: 23.4375em) {
+  .main__container .main .second__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .main__container .main .second__container a {
@@ -300,7 +433,19 @@ body {
   background-color: #293356;
   padding: 0.6875rem 2.35rem;
   border-radius: 1.25rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.375rem;
+}
+
+@media (min-width: 23.4375em) {
+  .main__container .main .second__container a {
+    margin-right: 35px;
+    margin-top: 35px;
+    padding: 11px 5px;
+    border-radius: 24px;
+    margin-bottom: 1.875rem;
+    width: 45%;
+    text-align: center;
+  }
 }
 
 .attribution {

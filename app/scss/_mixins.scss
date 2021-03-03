@@ -29,3 +29,9 @@ $breakpoints-down: (
     @content;
   }
 }
+
+@mixin breakpoint-between($from, $to) {
+  @media (min-width: $from) and (max-width: $to) {
+    @content;
+  }
+}
