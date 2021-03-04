@@ -5,19 +5,16 @@
     background-color: $white;
     border-radius: 10px;
     box-shadow: 0 19px 38px #eee, 0 15px 12px #efefef;
-    border: 1px solid #eee;
-    top: -9rem;
+    border: 1px solid transparent;
+    top: -8rem;
     max-width: 513.8932px;
 
     @include breakpoint-up(small) {
       margin: 0 auto;
+      top: -7.5rem;
     }
 
-    // @media (min-width: 376px) and (max-width: 550px) {
-    //   margin: 0 10px;
-    // }
-
-    @include breakpoint-between(376px, 550px) {
+    @include breakpoint-between(375px, 550px) {
       margin: 0 10px;
     }
 
@@ -41,6 +38,18 @@
 
         @include breakpoint-up(small) {
           width: 84%;
+        }
+
+        @include breakpoint-down(small) {
+          margin-bottom: 0;
+        }
+
+        @include breakpoint-between(456px, 550px) {
+          margin-left: -25px;
+        }
+
+        @include breakpoint-between(240px, 320px) {
+          width: 10rem;
         }
       }
 
@@ -136,8 +145,8 @@
       flex-wrap: wrap;
 
       .pageview__text {
-        @media (min-width: 375px) and (max-width: 550px) {
-          margin-left: -25px;
+        @include breakpoint-between(375px, 550px) {
+          margin-left: -19px;
         }
         @include breakpoint-up(small) {
           order: 1;
@@ -155,9 +164,13 @@
       }
 
       .pageview_pricing {
-        @media (min-width: 375px) and (max-width: 435px) {
+        // @media (min-width: 375px) and (max-width: 435px) {
+        //   padding-right: 31px !important;
+        // }
+        @include breakpoint-between(375px, 435px) {
           padding-right: 31px !important;
         }
+
         @include breakpoint-up(small) {
           order: 2;
           flex: 1 50%;
@@ -178,6 +191,10 @@
       @include breakpoint-up(small) {
         justify-content: flex-end;
         padding-right: 20px;
+      }
+
+      @include breakpoint-down(small) {
+        width: 95%;
       }
     }
 
@@ -280,9 +297,6 @@
 
     .list__container {
       width: 80%;
-      @include breakpoint-up(small) {
-        // margin-left: 40px;
-      }
     }
 
     .second__container {
