@@ -27,7 +27,7 @@ function handlePageviewAndAmount() {
   pageViewValue.textContent = pageViews[value - 1];
 
   pageViewAmount.textContent = yearlyBillingToggle.checked
-    ? '$' + (pricingArray[value - 1] * 0.25).toFixed(2)
+    ? '$' + (pricingArray[value - 1] * 0.75).toFixed(2)
     : '$' + pricingArray[value - 1].toFixed(2);
 }
 
