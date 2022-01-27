@@ -1,6 +1,6 @@
 # Pricing Component
 
-A cool responsive pricing component using <img style="width: 25px; margin-bottom: -6px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png"> & <img style="width: 22px; margin-bottom: -6px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">.
+A cool responsive pricing component using <img style="width: 22px; margin-bottom: -6px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">.
 
 ## Overview
 
